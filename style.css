@@ -10,6 +10,10 @@ img {
 }
 /*general*/
 
+.menu {
+  display: none;
+}
+
 header {
   background: #467198;
   padding-block: 20px;
@@ -280,4 +284,24 @@ button {
   font-size: 25px;
   place-self: center;
   margin-top: 5rem;
+}
+
+@media (width < 800px) {
+  main {
+    padding-inline: 5rem;
+    padding-bottom: 3rem;
+  }
+  .hero {
+    font-size: 40px;
+    padding-block: 1.5rem;
+    margin-inline: -5rem;
+  }
+
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .arrowBack {
+    margin-left: -2rem;
+  }
 }
