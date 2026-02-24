@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/*general*/
+
+header {
+  background: #467198;
+  padding-block: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2rem;
+}
+.navForside {
+  aspect-ratio: 1/1;
+  width: 50px;
+  background: #f4ed73;
+  border-radius: 99px;
+  margin: auto 0;
+}
+
+body {
+  background: #f3eee1;
+}
+
+footer {
+  background: #467198;
+  height: 10rem;
+}
+
+main {
+  padding-inline: 10rem;
+  padding-bottom: 6rem;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  padding-inline: 2rem;
+}
+
+nav ul a {
+  color: #f4ed73;
+  font-size: 30px;
+}
+
+nav ul a:hover {
+  text-decoration: dotted underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*forside*/
+
+.hero {
+  background: #94553a;
+  text-align: center;
+  font-weight: bold;
+  font-size: 80px;
+  padding-block: 3rem;
+  margin-inline: -10rem;
+
+  margin-bottom: 2rem;
+}
+
+h1 {
+  color: #f4ed73;
+}
+
+h2 {
+  font-size: 45px;
+  padding-bottom: 20px;
+  color: #94553a;
+}
+
+.kategorier {
+  border-bottom: 2px solid #94553a;
+}
+.produktliste {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #94553a;
+  padding-inline: 3rem;
+  padding-block: 10px;
+  font-size: 20px;
+  color: #94553a;
+}
+.produktliste:hover {
+  border-top: 2px solid #2a4a36;
+  color: #2a4a36;
+  font-weight: bold;
+}
+
+.arrow {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-right: 3px solid;
+  border-bottom: 3px solid;
+  transform: rotate(-45deg);
+}
+/*productlist*/
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+}
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 6;
+  border: 3px solid #2a4a36;
+  background: white;
+  padding: 20px;
+  gap: 10px;
+  color: #2a4a36;
+}
+
+.produktLink {
+  text-decoration: none;
+  color: #2a4a36;
+}
+.produktLink:hover {
+  text-decoration: underline;
+}
+
+.dealBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deal {
+  display: none;
+}
+
+.discount .deal {
+  display: block;
+  background: #972d2d;
+  color: #f3eee1;
+  padding: 5px;
+  padding-right: 20px;
+  margin-top: -5px;
+  margin-right: -20px;
+}
+
+.price {
+  font-weight: bold;
+}
+.discount .priceBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.discount .oldPrice {
+  text-decoration: line-through;
+}
+.newPrice {
+  display: none;
+}
+.discount .newPrice {
+  display: block;
+
+  color: #972d2d;
+  font-weight: bold;
+}
+
+button {
+  background: transparent;
+  border: 1px solid #2a4a36;
+  padding-block: 10px;
+  color: #2a4a36;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.soldout button {
+  display: none;
+}
+.soldoutText {
+  display: none;
+}
+
+.soldout .soldoutText {
+  display: block;
+  color: #467198;
+  font-size: 18px;
+  font-weight: bold;
+  padding-block: 10px;
+}
+
+/*product*/
+.productGrid {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding-block: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  color: #f3eee1;
+}
+.productGrid img {
+  border: 5px solid #94553a;
+}
+.produktBeskrivelse {
+  background: #94553a;
+  padding: 3rem;
+}
+
+.basket {
+  background-color: #f4ed73;
+  color: #94553a;
+  width: 80%;
+  margin: 0 auto;
+  padding-inline: auto;
+  padding-block: 10px;
+  text-align: center;
+}
+
+.basket:hover {
+  text-decoration: underline;
+}
+
+.back {
+  margin-top: 2rem;
+}
+
+.arrowBack {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-right: 5px solid #94553a;
+  border-bottom: 5px solid #94553a;
+  transform: rotate(135deg);
+  margin-top: 2rem;
+  margin-left: -7rem;
+  place-self: center;
+}
+
+.stockStatus {
+  display: flex;
+  gap: 20px;
+}
+
+.produktBeskrivelse h3 {
+  margin-top: 10px;
+  margin-bottom: 2rem;
+  font-size: 30px;
+}
+
+.produktBeskrivelse h4 {
+  font-size: 20px;
+}
+
+.produktBeskrivelse p {
+  margin-block: 10px;
+}
+
+.productPrice {
+  font-size: 23px;
+}
+
+.stockStatus {
+  color: #f4ed73;
+  font-size: 25px;
+  place-self: center;
+  margin-top: 5rem;
+}
