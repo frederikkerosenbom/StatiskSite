@@ -6,24 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <title>Statisk Site</title>
+    <script src="js/product.js" defer></script>
+    <script src="js/cart-ui.js" defer></script>
+
 </head>
 
 <body>
     <header id="product">
-        <a class="navForside" href="index.html"></a>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">FORSIDE</a></li>
-                <li><a href="productlist.html">PRODUKTLISTE</a></li>
-                <li><a href="product.html">PRODUKT</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main id="productContainer">
+        <ul class="menu">
 
+            <a class="navForside" href="index.html">
+            </a>
+
+            <li>
+                <a href="#" id="cartOpenBtn"><img src="img/Shoppingcart.svg" alt="shoppingCart"> (<span
+                        id="cartCount">0</span>)</a>
+            </li>
+        </ul>
+
+    </header>
+    <main>
+        <section id="productContainer"></section>
+        <!-- SLIDE-IN CART -->
+        <aside id="cartPanel" class="cartPanel" aria-hidden="true">
+            <div class="cartHeader">
+                <h3>Kurv</h3>
+                <button type="button" id="cartCloseBtn" class="cartClose">✕</button>
+            </div>
+
+            <div id="cartItems" class="cartItems"></div>
+
+            <div class="cartFooter">
+                <p id="cartTotal" class="cartTotal"></p>
+                <button type="button" id="cartClearBtn" class="cartClearBtn">Ryd kurv</button>
+            </div>
+        </aside>
+
+        <div id="cartOverlay" class="cartOverlay" aria-hidden="true"></div>
     </main>
     <footer></footer>
-    <script src="js/product.js"></script>
+    <!-- <script src="js/product.js"></script> -->
 </body>
 
 </html>

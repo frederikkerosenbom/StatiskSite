@@ -6,152 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <title>Statisk Site</title>
+    <script src="js/productlist.js" defer></script>
+    <script src="js/cart-ui.js" defer></script>
+
 </head>
 
 <body>
     <header id="productlist">
-        <a class="navForside" href="index.html"></a>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">FORSIDE</a></li>
-                <li><a href="productlist.html">PRODUKTLISTE</a></li>
-                <li><a href="product.html">PRODUKT</a></li>
+        <ul class="menu">
 
-            </ul>
-        </nav>
+            <a class="navForside" href="index.html">
+            </a>
+
+            <li>
+                <a href="#" id="cartOpenBtn"><img src="img/Shoppingcart.svg" alt="shoppingCart"> (<span
+                        id="cartCount">0</span>)</a>
+            </li>
+        </ul>
+
     </header>
     <main>
+        <a href="index.html" class="arrowBack"></a>
+        <section class="controls">
+            <div class="controlsLeft">
+                <label>
+                    Sortér:
+                    <select id="sortSelect" class="controlSelect">
+                        <option value="">Standard</option>
+                        <option value="price-asc">Pris: Lav → Høj</option>
+                        <option value="price-desc">Pris: Høj → Lav</option>
+                        <option value="alpha-asc">A → Z</option>
+                        <option value="alpha-desc">Z → A</option>
+                    </select>
+                </label>
 
-        <div class="container">
-            <div class="product-gallery">
-                <article class="product discount">
-                    <div class="dealBox">
-                        <h4>Brand</h4>
-                        <p class="deal">DEAL</p>
-                    </div>
-                    <h3>Produkt 1</h3>
-                    <img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="Produkt 1" />
-                    <div class="priceBox">
-                        <p class="newPrice"> 99 kr</p>
-                        <p class="price oldPrice">199 kr</p>
-                    </div>
-                    <a href="product.html" class="produktLink">Produktbeskrivelse</a>
-                    <button>Buy now</button>
-                    <p class="soldoutText">Sold out</p>
-                </article>
-                <article class="product">
-                    <div class="dealBox">
-                        <h4>Brand</h4>
-                        <p class="deal">DEAL</p>
-                    </div>
-                    <h3>Produkt 2 med meget langt produktnavn</h3>
-                    <img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="Produkt 2" />
-                    <div class="priceBox">
-                        <p class="newPrice"> </p>
-                        <p class="price oldPrice">299 kr</p>
-                    </div>
-                    <a href="product.html" class="produktLink">Produktbeskrivelse</a>
-                    <button>Buy now</button>
-                    <p class="soldoutText">Sold out</p>
-                </article>
-                <article class="product soldout">
-                    <div class="dealBox">
-                        <h4>Brand</h4>
-                        <p class="deal">DEAL</p>
-                    </div>
-                    <h3>Produkt 3</h3>
-                    <img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="Produkt 3" />
-                    <div class="priceBox">
-                        <p class="newPrice"> </p>
-                        <p class="price oldPrice">149 kr</p>
-                    </div>
-                    <a href="product.html" class="produktLink">Produktbeskrivelse</a>
-                    <button>Buy now</button>
-                    <p class="soldoutText">Sold out</p>
-                </article>
-                <article class="product">
-                    <div class="dealBox">
-                        <h4>Brand</h4>
-                        <p class="deal">DEAL</p>
-                    </div>
-                    <h3>Produkt 4</h3>
-                    <img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="Produkt 4" />
-                    <div class="priceBox">
-                        <p class="newPrice"> </p>
-                        <p class="price oldPrice">399 kr</p>
-                    </div>
-                    <a href="product.html" class="produktLink">Produktbeskrivelse</a>
-                    <button>Buy now</button>
-                    <p class="soldoutText">Sold out</p>
-                </article>
-                <article class="product discount">
-                    <div class="dealBox">
-                        <h4>Brand</h4>
-                        <p class="deal">DEAL</p>
-                    </div>
-                    <h3>Produkt 5</h3>
-                    <img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="Produkt 5" />
-                    <div class="priceBox">
-                        <p class="newPrice">189 kr</p>
-                        <p class="price oldPrice">249 kr</p>
-                    </div>
-                    <a href="product.html" class="produktLink">Produktbeskrivelse</a>
-                    <button>Buy now</button>
-                    <p class="soldoutText">Sold out</p>
-                </article>
-                <article class="product">
-                    <div class="dealBox">
-                        <h4>Brand</h4>
-                        <p class="deal">DEAL</p>
-                    </div>
-                    <h3>Produkt 6</h3>
-                    <img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="Produkt 6" />
-                    <div class="priceBox">
-                        <p class="newPrice"> </p>
-                        <p class="price oldPrice">179 kr</p>
-                    </div>
-                    <a href="product.html" class="produktLink">Produktbeskrivelse</a>
-                    <button>Buy now</button>
-                    <p class="soldoutText">Sold out</p>
-                </article>
-                <article class="product">
-                    <div class="dealBox">
-                        <h4>Brand</h4>
-                        <p class="deal">DEAL</p>
-                    </div>
-                    <h3>Produkt 7</h3>
-                    <img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="Produkt 7" />
-                    <div class="priceBox">
-                        <p class="newPrice"> </p>
-                        <p class="price oldPrice">299 kr</p>
-                    </div>
-                    <a href="product.html" class="produktLink">Produktbeskrivelse</a>
-                    <button>Buy now</button>
-                    <p class="soldoutText">Sold out</p>
+                <label class="filterLabel">
+                    Filtrer:
+                    <details class="filterDropdown" id="filterDropdown">
+                        <summary class="controlBtn">
+                            <span id="filterLabelText">Ingen filtre</span>
+                        </summary>
 
-                </article>
-                <article class="product">
-                    <div class="dealBox">
-                        <h4>Brand</h4>
-                        <p class="deal">DEAL</p>
-                    </div>
-                    <h3>Produkt 8</h3>
-                    <img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="Produkt 8" />
-                    <div class="priceBox">
-                        <p class="newPrice"> </p>
-                        <p class="price oldPrice">99 kr</p>
-                    </div>
-                    <a href="product.html" class="produktLink">Produktbeskrivelse</a>
-                    <button>Buy now</button>
-                    <p class="soldoutText">Sold out</p>
-                </article>
+                        <div class="filterContent">
+                            <label>
+                                Season:
+                                <select id="seasonSelect">
+                                    <option value="">Alle</option>
+                                </select>
+                            </label>
 
+                            <label>
+                                Usage:
+                                <select id="usageSelect">
+                                    <option value="">Alle</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Subcategory:
+                                <select id="subcategorySelect">
+                                    <option value="">Alle</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Gender:
+                                <select id="genderSelect">
+                                    <option value="">Alle</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                Article type:
+                                <select id="articleSelect">
+                                    <option value="">Alle</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                <input type="checkbox" id="discountOnly" />
+                                Kun tilbud
+                            </label>
+
+                            <label>
+                                <input type="checkbox" id="inStockOnly" />
+                                Kun på lager
+                            </label>
+
+                            <button type="button" id="clearFiltersBtn" class="clearBtn">Ryd filtre</button>
+                        </div>
+                    </details>
+                </label>
             </div>
-        </div>
+            <p id="resultCount" class="resultCount"></p>
+        </section>
+
+        <h2 class="categoryHeader">Category</h2>
+
+        <section class="productContainer"></section>
+
+        <section class="pagination">
+            <button type="button" id="prevPageBtn">Forrige</button>
+            <p id="pageInfo"></p>
+            <button type="button" id="nextPageBtn">Næste</button>
+        </section>
+
+        <!-- SLIDE-IN CART -->
+        <aside id="cartPanel" class="cartPanel" aria-hidden="true">
+            <div class="cartHeader">
+                <h3>Kurv</h3>
+                <button type="button" id="cartCloseBtn" class="cartClose">✕</button>
+            </div>
+
+            <div id="cartItems" class="cartItems"></div>
+
+            <div class="cartFooter">
+                <p id="cartTotal" class="cartTotal"></p>
+                <button type="button" id="cartClearBtn" class="cartClearBtn">Ryd kurv</button>
+            </div>
+        </aside>
+
+        <div id="cartOverlay" class="cartOverlay" aria-hidden="true"></div>
 
     </main>
     <footer></footer>
-
+    <!-- <script src="js/productlist.js"></script> -->
 </body>
 
 </html>

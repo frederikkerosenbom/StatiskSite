@@ -6,38 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <title>Statisk Site</title>
+    <script src="js/index.js" defer></script>
+    <script src="js/cart-ui.js" defer></script>
 </head>
 
 <body>
     <header id="forside">
-        <a class="navForside" href="index.html"></a>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">FORSIDE</a></li>
-                <li><a href="productlist.html">PRODUKTLISTE</a></li>
-                <li><a href="product.html">PRODUKT</a></li>
-            </ul>
-        </nav>
+        <ul class="menu">
+
+            <a class="navForside" href="index.html">
+            </a>
+
+            <li>
+                <a href="#" id="cartOpenBtn"><img src="img/Shoppingcart.svg" alt="shoppingCart"> (<span
+                        id="cartCount">0</span>)</a>
+            </li>
+        </ul>
     </header>
     <main>
         <div class="hero">
             <h1>WEBSHOP</h1>
         </div>
         <h2>CATEGORIES</h2>
-        <div class="kategorier">
+        <div class="kategorier" id="categories"></div>
 
-            <a href="productlist.html" class="produktliste">Accessories <span class="arrow"></span></a>
-            <a href="productlist.html" class="produktliste">Apparel <span class="arrow"></span></a>
-            <a href="productlist.html" class="produktliste">Footwear <span class="arrow"></span></a>
-            <a href="productlist.html" class="produktliste">Free Items <span class="arrow"></span></a>
-            <a href="productlist.html" class="produktliste">Personal Care <span class="arrow"></span></a>
-            <a href="productlist.html" class="produktliste">Sporting Goods <span class="arrow"></span></a>
+        <!-- SLIDE-IN CART -->
+        <aside id="cartPanel" class="cartPanel" aria-hidden="true">
+            <div class="cartHeader">
+                <h3>Kurv</h3>
+                <button type="button" id="cartCloseBtn" class="cartClose">✕</button>
+            </div>
 
+            <div id="cartItems" class="cartItems"></div>
 
+            <div class="cartFooter">
+                <p id="cartTotal" class="cartTotal"></p>
+                <button type="button" id="cartClearBtn" class="cartClearBtn">Ryd kurv</button>
+            </div>
+        </aside>
 
-
-        </div>
-
+        <div id="cartOverlay" class="cartOverlay" aria-hidden="true"></div>
     </main>
     <footer></footer>
 
